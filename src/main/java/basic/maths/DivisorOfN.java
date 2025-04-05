@@ -26,7 +26,7 @@ public class DivisorOfN {
         for (int i = 1; i <= sqrtN; ++i) {
             if (n % i == 0) {
                 divisors.add(i);
-                if (i != n / i) {
+                if (i != n / i) { // because not to add the perfect sqrt twice in the array, alternative is to use set.
                     divisors.add(n / i);
                 }
             }
