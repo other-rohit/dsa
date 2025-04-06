@@ -1,7 +1,5 @@
 package basic.maths;
 
-import java.util.Arrays;
-
 public class Armstrong {
 
     public static void main(String[] args) {
@@ -9,6 +7,9 @@ public class Armstrong {
         System.out.println(isArmstrongOptimalSolution(371));
     }
 
+    // Time complexity is O(log n)
+    // for loops runs on the number of digits in number, the number of digits in number is proportional to log10(a)
+    // In the worst case when N is a multiple of 10 the number of digits in N is log10 N + 1.
     static boolean isArmstrongBruteForce(int a){
         char[] chars = String.valueOf(a).toCharArray();
         int length = chars.length;
@@ -20,6 +21,7 @@ public class Armstrong {
         return result == a;
     }
 
+    // Time complexity is same as above
     static boolean isArmstrongOptimalSolution(int a){
         int originalNumber = a;
         int sum = 0;
